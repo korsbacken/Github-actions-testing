@@ -19,6 +19,7 @@ public class StepDefinitions2 {
     @When("User enter search term")
     public void user_enter_search_term() {
         driver.get("https://webshop-agil-testautomatiserare.netlify.app/checkout");
+
     }
 
     @When("click on search")
