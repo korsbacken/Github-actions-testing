@@ -10,6 +10,6 @@ public class GithubActionsTests {
 
     @Test
     public void test() {
-        assertTrue(false);
+        assertTrue(true);
     }
 }

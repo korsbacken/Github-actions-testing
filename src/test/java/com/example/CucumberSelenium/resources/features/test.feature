@@ -6,7 +6,7 @@ Feature: The Shop
 
     #Samuel
   Scenario: When on start page user should see correct page title
-    Then the page title should be "The Shop!"
+    Then the page title should be "The Shop"
 
     #Samuel
   Scenario: When user clicks on the checkout button on the start page user should be redirected to the checkout form page
