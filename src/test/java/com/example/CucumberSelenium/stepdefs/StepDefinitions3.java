@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 public class StepDefinitions3 {
 
     private final WebDriver driver; // Define WebDriver instance
+    public Actions actions;
 
     public StepDefinitions3() {
         this.driver = Hooks.getDriver();
@@ -26,10 +27,7 @@ public class StepDefinitions3 {
     @Given("user clicks on add to cart button")
     public void user_clicks_on_add_to_cart_button() {
         WebElement element = driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button"));
-
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-        Actions actions = new Actions(driver);
+        actions = new Actions(driver);
         actions.moveToElement(element);
         actions.perform();
 
@@ -44,6 +42,6 @@ public class StepDefinitions3 {
 
     @Then("user should see the added product in the cart")
     public void user_should_see_the_added_product_in_the_cart() {
-        Assertions.assertEquals("Mens Cotton Jacket", driver.findElement(By.xpath("//div[@class='w-100']/h6")).getText());
+        Assertions.assertEquals("Rain Jacket Women Windbreaker Striped Climbing Raincoats", driver.findElement(By.xpath("//div[@class='w-100']/h6")).getText());
     }
 }
