@@ -27,9 +27,9 @@ public class StepDefinitions3 {
     @Given("user clicks on add to cart button")
     public void user_clicks_on_add_to_cart_button() {
         WebElement element = driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button"));
-        actions = new Actions(driver);
-        actions.moveToElement(element);
-        actions.perform();
+//        actions = new Actions(driver);
+//        actions.moveToElement(element);
+//        actions.perform();
 
         element.click();
 
