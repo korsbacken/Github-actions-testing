@@ -79,7 +79,7 @@
                             **/GithubActionsTests.java
                         </include>
                         <include>
-                            **/CucumberTestRunner.java
+                            **/CucumberTestRunnerTests.java
                         </include>
                     </includes>
                 </configuration>

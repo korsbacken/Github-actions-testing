@@ -14,10 +14,10 @@ public class Hooks {
     @Before
     public void setup() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
 //        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--incognito");
-        options.addArguments("--start-maximized");
+//        options.addArguments("--incognito");
+//        options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }

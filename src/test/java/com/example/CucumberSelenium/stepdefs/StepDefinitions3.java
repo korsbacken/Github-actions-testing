@@ -23,7 +23,7 @@ public class StepDefinitions3 {
 
     @Given("user clicks on add to cart button")
     public void user_clicks_on_add_to_cart_button() {
-        driver.findElement(By.xpath("//h3[text()='Mens Cotton Jacket']/following-sibling::button")).click();
+        driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button")).click();
 
     }
 
