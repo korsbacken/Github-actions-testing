@@ -27,11 +27,11 @@ public class StepDefinitions3 {
     public void user_clicks_on_add_to_cart_button() {
         WebElement element = driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button"));
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(element);
-//        actions.perform();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element);
+        actions.perform();
 
         element.click();
 
