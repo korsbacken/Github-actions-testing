@@ -1,16 +1,14 @@
 package com.example.CucumberSelenium.stepdefs;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class StepDefinitions2 {
 
-    private WebDriver driver; // Define WebDriver instance
+    private final WebDriver driver; // Define WebDriver instance
 
     public StepDefinitions2() {
         this.driver = Hooks.getDriver();
@@ -19,7 +17,6 @@ public class StepDefinitions2 {
     @When("User enter search term")
     public void user_enter_search_term() {
         driver.get("https://webshop-agil-testautomatiserare.netlify.app/checkout");
-
     }
 
     @When("click on search")

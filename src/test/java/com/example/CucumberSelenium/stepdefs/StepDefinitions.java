@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class StepDefinitions {
 
-    private WebDriver driver; // Define WebDriver instance
+    private final WebDriver driver; // Define WebDriver instance
 
     public StepDefinitions() {
         this.driver = Hooks.getDriver();
