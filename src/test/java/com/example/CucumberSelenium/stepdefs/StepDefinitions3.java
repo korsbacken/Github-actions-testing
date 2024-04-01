@@ -5,8 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class StepDefinitions3 {
 
@@ -23,7 +25,15 @@ public class StepDefinitions3 {
 
     @Given("user clicks on add to cart button")
     public void user_clicks_on_add_to_cart_button() {
-        driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button")).click();
+        WebElement element = driver.findElement(By.xpath("//h3[text()='Rain Jacket Women Windbreaker Striped Climbing Raincoats']/following-sibling::button"));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(element);
+//        actions.perform();
+
+        element.click();
 
     }
 
